@@ -9,8 +9,8 @@ using WidgetServer.Data;
 namespace WidgetServer.Migrations
 {
     [DbContext(typeof(WidgetsDataContext))]
-    [Migration("20190715074713_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20190806130726_RemovedUser")]
+    partial class RemovedUser
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,21 +20,45 @@ namespace WidgetServer.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("reusable_modules_sharing_server.Models.Widget", b =>
+                {
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Color");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("UserId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Widget");
+                });
+
             modelBuilder.Entity("WidgetServer.Models.User", b =>
                 {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("Email")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Familyname");
 
                     b.Property<string>("GoogleID");
 
                     b.Property<string>("Name");
 
-                    b.Property<string>("Surname");
-
-                    b.HasKey("ID");
+                    b.HasKey("Email");
 
                     b.ToTable("User");
+                });
+
+            modelBuilder.Entity("reusable_modules_sharing_server.Models.Widget", b =>
+                {
+                    b.HasOne("WidgetServer.Models.User", "User")
+                        .WithMany("Widgets")
+                        .HasForeignKey("UserId");
                 });
 #pragma warning restore 612, 618
         }

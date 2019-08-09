@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace reusable_modules_sharing_server.Migrations
+namespace WidgetServer.Migrations
 {
     public partial class AttributesNotNull : Migration
     {

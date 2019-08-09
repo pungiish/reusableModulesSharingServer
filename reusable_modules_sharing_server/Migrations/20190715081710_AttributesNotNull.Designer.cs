@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using reusable_modules_sharing_server.Data;
+using WidgetServer.Data;
 
-namespace reusable_modules_sharing_server.Migrations
+namespace WidgetServer.Migrations
 {
-    [DbContext(typeof(UserModel))]
+    [DbContext(typeof(WidgetsDataContext))]
     [Migration("20190715081710_AttributesNotNull")]
     partial class AttributesNotNull
     {
@@ -20,7 +20,7 @@ namespace reusable_modules_sharing_server.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("reusable_modules_sharing_server.Models.User", b =>
+            modelBuilder.Entity("WidgetServer.Models.User", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()

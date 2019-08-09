@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "reusable_modules_sharing_server": {
+    "WidgetServer": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/Users",

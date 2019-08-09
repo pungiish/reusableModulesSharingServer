@@ -2,22 +2,22 @@
 
 namespace WidgetServer.Migrations
 {
-    public partial class Changed_property_names_to_match_google_results : Migration
+    public partial class changedEmailName : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.RenameColumn(
-                name: "Surname",
+                name: "EmailAddress",
                 table: "User",
-                newName: "Familyname");
+                newName: "Email");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.RenameColumn(
-                name: "Familyname",
+                name: "Email",
                 table: "User",
-                newName: "Surname");
+                newName: "EmailAddress");
         }
     }
 }

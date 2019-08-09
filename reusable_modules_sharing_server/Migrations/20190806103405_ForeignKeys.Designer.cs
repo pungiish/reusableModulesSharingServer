@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WidgetServer.Data;
 
 namespace WidgetServer.Migrations
 {
     [DbContext(typeof(WidgetsDataContext))]
-    partial class UserModelModelSnapshot : ModelSnapshot
+    [Migration("20190806103405_ForeignKeys")]
+    partial class ForeignKeys
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,6 +31,8 @@ namespace WidgetServer.Migrations
 
                     b.Property<string>("UserId");
 
+                    b.Property<string>("Username");
+
                     b.HasKey("Id");
 
                     b.HasIndex("UserId");
@@ -38,7 +42,7 @@ namespace WidgetServer.Migrations
 
             modelBuilder.Entity("WidgetServer.Models.User", b =>
                 {
-                    b.Property<string>("Email")
+                    b.Property<string>("EmailAddress")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Familyname");
@@ -47,15 +51,15 @@ namespace WidgetServer.Migrations
 
                     b.Property<string>("Name");
 
-                    b.HasKey("Email");
+                    b.HasKey("EmailAddress");
 
                     b.ToTable("User");
                 });
 
             modelBuilder.Entity("reusable_modules_sharing_server.Models.Widget", b =>
                 {
-                    b.HasOne("WidgetServer.Models.User", "User")
-                        .WithMany("Widgets")
+                    b.HasOne("WidgetServer.Models.User", "user")
+                        .WithMany()
                         .HasForeignKey("UserId");
                 });
 #pragma warning restore 612, 618

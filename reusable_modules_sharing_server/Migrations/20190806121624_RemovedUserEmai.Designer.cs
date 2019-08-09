@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WidgetServer.Data;
 
 namespace WidgetServer.Migrations
 {
     [DbContext(typeof(WidgetsDataContext))]
-    partial class UserModelModelSnapshot : ModelSnapshot
+    [Migration("20190806121624_RemovedUserEmai")]
+    partial class RemovedUserEmai
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -27,11 +29,13 @@ namespace WidgetServer.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<string>("UserId");
+                    b.Property<string>("Username");
+
+                    b.Property<string>("Widget");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("Widget");
 
                     b.ToTable("Widget");
                 });
@@ -54,9 +58,9 @@ namespace WidgetServer.Migrations
 
             modelBuilder.Entity("reusable_modules_sharing_server.Models.Widget", b =>
                 {
-                    b.HasOne("WidgetServer.Models.User", "User")
+                    b.HasOne("WidgetServer.Models.User", "user")
                         .WithMany("Widgets")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("Widget");
                 });
 #pragma warning restore 612, 618
         }

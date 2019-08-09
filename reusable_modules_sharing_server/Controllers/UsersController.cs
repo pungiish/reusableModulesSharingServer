@@ -10,39 +10,48 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
-using reusable_modules_sharing_server.Data;
 using reusable_modules_sharing_server.Models;
+using reusable_modules_sharing_server.ViewModels;
+using WidgetServer.Data;
+using WidgetServer.Models;
+using WidgetServer.ViewModels;
 
-namespace reusable_modules_sharing_server.Controllers
+namespace WidgetServer.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly UserModel _context;
+        private readonly WidgetsDataContext _context;
 
-        public UsersController(UserModel context)
+        public UsersController(WidgetsDataContext context)
         {
             _context = context;
         }
 
         // GET: api/Users
         [HttpGet]
-        public IEnumerable<User> GetUsers()
+        public async Task<IActionResult> GetUsers()
         {
-            return _context.Users;
+            var users = await _context.Users
+                .Include(u => u.Widgets)
+                .Select(u => u.ToListViewModel())
+                .ToListAsync();
+            return Ok(users);
         }
 
-        // GET: api/Users/5
+        // GET: api/users/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetUser([FromRoute] int id)
+        public async Task<IActionResult> GetUser([FromRoute] string id)
         {
-            if (!ModelState.IsValid)
+                if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var user = await _context.Users.FindAsync(id);
+            var user = await _context.Users
+                .Include(u => u.Widgets)
+                .Select(u => u.ToListViewModel()).ToListAsync();
 
             if (user == null)
             {
@@ -52,16 +61,16 @@ namespace reusable_modules_sharing_server.Controllers
             return Ok(user);
         }
 
-        // PUT: api/Users/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutUser([FromRoute] int id, [FromBody] User user)
+        // PUT: api/users/5
+        [HttpPut("{emailAddress}")]
+        public async Task<IActionResult> PutUser([FromRoute] string emailAddress, [FromBody] UserViewModel user)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != user.ID)
+            if (emailAddress != user.Email)
             {
                 return BadRequest();
             }
@@ -74,7 +83,7 @@ namespace reusable_modules_sharing_server.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!UserExists(id))
+                if (!UserExists(emailAddress))
                 {
                     return NotFound();
                 }
@@ -89,13 +98,16 @@ namespace reusable_modules_sharing_server.Controllers
 
         // POST: api/Users
         [HttpPost]
-        public async Task<IActionResult> PostUser([FromBody] User user)
+        public async Task<IActionResult> PostUser([FromBody] UserViewModel model)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            bool exists = _context.Users.Any(existingUser => existingUser.GoogleID == user.GoogleID);
+
+            User user = model.ToUser(model);
+
+            bool exists = UserExists(user.Email);
             if (!exists)
             {
                 _context.Users.Add(user);
@@ -103,33 +115,13 @@ namespace reusable_modules_sharing_server.Controllers
             }
             else
             {
-                User foundUser = _context.Users.Where(user1 => user1.GoogleID == user.GoogleID).Single();
-                user.ID = foundUser.ID;
+                var users = await _context.Users
+               .Include(u => u.Widgets).Select(w => w.ToListViewModel()).ToListAsync();
+                return Ok(users);
             }
-            return CreatedAtAction("GetUser", new { id = user.ID }, user);
+            return CreatedAtAction("GetUser", new { id = user.Email }, user);
         }
 
-        // POST: api/Users/Components
-        //[ActionName("File")]
-        //[HttpPost("Components")]
-        //public IActionResult Download(string id)
-        //{
-        //    IFileProvider provider = new PhysicalFileProvider("D:/Centiva/reusable_modules_sharing_server/reusable_modules_sharing_server");
-        //    IFileInfo fileInfo = provider.GetFileInfo("test.txt");
-        //    var readStream = fileInfo.CreateReadStream();
-        //    var mimeType = "application/octet-stream";
-        //    return File(readStream, mimeType, "test.txt");
-        //}
-        [HttpPost("Components")]
-        public async Task<FileStream> DownloadFile(string fileName)
-        {
-            var currentDirectory = System.IO.Directory.GetCurrentDirectory();
-            string file = Path.Combine(currentDirectory, "Assets/elements.js");
-            FileStream first = new FileStream(file, FileMode.Open, FileAccess.Read);
-            return first;
-
-            
-        }
         // DELETE: api/Users/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser([FromRoute] int id)
@@ -151,9 +143,9 @@ namespace reusable_modules_sharing_server.Controllers
             return Ok(user);
         }
 
-        private bool UserExists(int id)
+        private bool UserExists(string emailAddres)
         {
-            return _context.Users.Any(e => e.ID == id);
+            return _context.Users.Any(e => e.Email == emailAddres);
         }
     }
 }

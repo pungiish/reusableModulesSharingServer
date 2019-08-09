@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace reusable_modules_sharing_server
+namespace WidgetServer
 {
     public class Program
     {

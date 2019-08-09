@@ -1,6 +1,6 @@
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// install a JSONP callback for chunk loading
-/******/ 	function webpackJsonpCallback(data) {
+/******/ 	function webpackJsonp1Callback(data) {
 /******/ 		var chunkIds = data[0];
 /******/ 		var moreModules = data[1];
 /******/ 		var executeModules = data[2];
@@ -138,11 +138,11 @@
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
-/******/ 	var jsonpArray = window["webpackJsonp"] = window["webpackJsonp"] || [];
+/******/ 	var jsonpArray = window["webpackJsonp1"] = window["webpackJsonp1"] || [];
 /******/ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
-/******/ 	jsonpArray.push = webpackJsonpCallback;
+/******/ 	jsonpArray.push = webpackJsonp1Callback;
 /******/ 	jsonpArray = jsonpArray.slice();
-/******/ 	for(var i = 0; i < jsonpArray.length; i++) webpackJsonpCallback(jsonpArray[i]);
+/******/ 	for(var i = 0; i < jsonpArray.length; i++) webpackJsonp1Callback(jsonpArray[i]);
 /******/ 	var parentJsonpFunction = oldJsonpFunction;
 /******/
 /******/
@@ -152,7 +152,7 @@
 /************************************************************************/
 /******/ ([]);
 //# sourceMappingURL=runtime.js.map
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["polyfills"],{
+(window["webpackJsonp1"] = window["webpackJsonp1"] || []).push([["polyfills"],{
 
 /***/ "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js":
 /*!**************************************************************************************************!*\
@@ -5962,7 +5962,7 @@ module.exports = __webpack_require__(/*! D:\Centiva\CustomElements\LoginElement\
 
 },[[1,"runtime"]]]);
 //# sourceMappingURL=polyfills.js.map
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
+(window["webpackJsonp1"] = window["webpackJsonp1"] || []).push([["main"],{
 
 /***/ "./src/$$_lazy_route_resource lazy recursive":
 /*!**********************************************************!*\
@@ -5994,7 +5994,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".form-control {\r\n  width: 100px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFhO0NBQ2QiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5mb3JtLWNvbnRyb2wge1xyXG4gIHdpZHRoOiAxMDBweDtcclxufVxyXG4iXX0= */"
+module.exports = "body {\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\n.container {\r\n    width: 100%;\r\n}\r\n\r\n.box {\r\n\twidth: 25%;\r\n\tmargin: 0 auto;\r\n}\r\n\r\n.box:before {\r\n\tcontent: \"\";\r\n\tdisplay: block;\r\n\tpadding-top: 100%;\r\n}\r\n\r\n.green {\r\n    background-color: green;\r\n}\r\n\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxVQUFVO0lBQ1YsV0FBVztDQUNkOztBQUVEO0lBQ0ksWUFBWTtDQUNmOztBQUVEO0NBQ0MsV0FBVztDQUNYLGVBQWU7Q0FDZjs7QUFFRDtDQUNDLFlBQVk7Q0FDWixlQUFlO0NBQ2Ysa0JBQWtCO0NBQ2xCOztBQUVEO0lBQ0ksd0JBQXdCO0NBQzNCIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJib2R5IHtcclxuICAgIG1hcmdpbjogMDtcclxuICAgIHBhZGRpbmc6IDA7XHJcbn1cclxuXHJcbi5jb250YWluZXIge1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbi5ib3gge1xyXG5cdHdpZHRoOiAyNSU7XHJcblx0bWFyZ2luOiAwIGF1dG87XHJcbn1cclxuXHJcbi5ib3g6YmVmb3JlIHtcclxuXHRjb250ZW50OiBcIlwiO1xyXG5cdGRpc3BsYXk6IGJsb2NrO1xyXG5cdHBhZGRpbmctdG9wOiAxMDAlO1xyXG59XHJcblxyXG4uZ3JlZW4ge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogZ3JlZW47XHJcbn1cclxuXHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -6005,7 +6005,7 @@ module.exports = ".form-control {\r\n  width: 100px;\r\n}\r\n\r\n/*# sourceMappi
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Login</h2>\n<form>\n\t<div class=\"form-group\">\n\t\t<label for=\"username\" class>Username</label>\n\t\t<input type=\"text\" formControlName=\"username\" class=\"form-control razred\" />\n\t</div>\n\t<div class=\"form-group\">\n\t\t<label for=\"password\">Password</label>\n\t\t<input type=\"password\" formControlName=\"password\" class=\"form-control\" />\n\t</div>\n</form>\n"
+module.exports = "<div class=\"container\">\n    <div class=\"box green\"></div>\n</div>\n"
 
 /***/ }),
 
@@ -6026,12 +6026,21 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
 let AppComponent = class AppComponent {
     constructor() {
         this.title = 'LoginElement';
     }
+    ngOnInit() {
+    }
 };
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Object)
+], AppComponent.prototype, "colour", void 0);
 AppComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
         selector: 'app-root',
@@ -6076,7 +6085,7 @@ let AppModule = class AppModule {
     constructor(injector) {
         this.injector = injector;
         const el = Object(_angular_elements__WEBPACK_IMPORTED_MODULE_2__["createCustomElement"])(_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], { injector: this.injector });
-        customElements.define('custom-login', el);
+        customElements.define('element-el', el);
     }
     ngDoBootstrap() { }
 };
@@ -6090,7 +6099,7 @@ AppModule = __decorate([
         ],
         entryComponents: [
             _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]
-        ]
+        ],
     }),
     __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"]])
 ], AppModule);
@@ -6167,7 +6176,7 @@ module.exports = __webpack_require__(/*! D:\Centiva\CustomElements\LoginElement\
 
 },[[0,"runtime","vendor"]]]);
 //# sourceMappingURL=main.js.map
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["styles"],{
+(window["webpackJsonp1"] = window["webpackJsonp1"] || []).push([["styles"],{
 
 /***/ "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src/index.js?!./src/styles.css":
 /*!*****************************************************************************************************************************************************************!*\
@@ -6731,7 +6740,7 @@ module.exports = __webpack_require__(/*! D:\Centiva\CustomElements\LoginElement\
 
 },[[2,"runtime"]]]);
 //# sourceMappingURL=styles.js.map
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vendor"],{
+(window["webpackJsonp1"] = window["webpackJsonp1"] || []).push([["vendor"],{
 
 /***/ "./node_modules/@angular/common/fesm2015/common.js":
 /*!*********************************************************!*\
@@ -18528,15 +18537,15 @@ function compileNgModuleFromRender2(ctx, ngModule, injectableCompiler) {
     });
     const injectorDef = importExpr(Identifiers$1.defineInjector).callFn([injectorDefArg]);
     ctx.statements.push(new ClassStmt(
-    /* name */ className, 
-    /* parent */ null, 
+    /* name */ className,
+    /* parent */ null,
     /* fields */ [new ClassField(
-        /* name */ 'ngInjectorDef', 
-        /* type */ INFERRED_TYPE, 
-        /* modifiers */ [StmtModifier.Static], 
-        /* initializer */ injectorDef)], 
-    /* getters */ [], 
-    /* constructorMethod */ new ClassMethod(null, [], []), 
+        /* name */ 'ngInjectorDef',
+        /* type */ INFERRED_TYPE,
+        /* modifiers */ [StmtModifier.Static],
+        /* initializer */ injectorDef)],
+    /* getters */ [],
+    /* constructorMethod */ new ClassMethod(null, [], []),
     /* methods */ []));
 }
 function tupleTypeOf(exp) {
@@ -18591,15 +18600,15 @@ function compilePipeFromRender2(outputCtx, pipe, reflector) {
     const res = compilePipeFromMetadata(metadata);
     const definitionField = outputCtx.constantPool.propertyNameOf(3 /* Pipe */);
     outputCtx.statements.push(new ClassStmt(
-    /* name */ name, 
-    /* parent */ null, 
+    /* name */ name,
+    /* parent */ null,
     /* fields */ [new ClassField(
-        /* name */ definitionField, 
-        /* type */ INFERRED_TYPE, 
-        /* modifiers */ [StmtModifier.Static], 
-        /* initializer */ res.expression)], 
-    /* getters */ [], 
-    /* constructorMethod */ new ClassMethod(null, [], []), 
+        /* name */ definitionField,
+        /* type */ INFERRED_TYPE,
+        /* modifiers */ [StmtModifier.Static],
+        /* initializer */ res.expression)],
+    /* getters */ [],
+    /* constructorMethod */ new ClassMethod(null, [], []),
     /* methods */ []));
 }
 
@@ -19298,7 +19307,7 @@ class ConvertActionBindingResult {
     /**
      * Render2 compatible statements,
      */
-    stmts, 
+    stmts,
     /**
      * Variable name used with render2 compatible statements.
      */
@@ -24522,7 +24531,7 @@ class NonBindableVisitor {
             return null;
         }
         const children = visitAll(this, ast.children, null);
-        return new Element$1(ast.name, visitAll(this, ast.attrs), 
+        return new Element$1(ast.name, visitAll(this, ast.attrs),
         /* inputs */ [], /* outputs */ [], children, /* references */ [], ast.sourceSpan, ast.startSourceSpan, ast.endSourceSpan);
     }
     visitComment(comment) { return null; }
@@ -25971,7 +25980,7 @@ function compileComponentFromMetadata(meta, constantPool, bindingParser) {
     if (firstSelector) {
         const selectorAttributes = firstSelector.getAttrs();
         if (selectorAttributes.length) {
-            definitionMap.set('attrs', constantPool.getConstLiteral(literalArr(selectorAttributes.map(value => value != null ? literal(value) : literal(undefined))), 
+            definitionMap.set('attrs', constantPool.getConstLiteral(literalArr(selectorAttributes.map(value => value != null ? literal(value) : literal(undefined))),
             /* forceShared */ true));
         }
     }
@@ -26271,8 +26280,8 @@ function createHostBindingsFunction(meta, bindingParser, constantPool, allocateP
     const bindings = bindingParser.createBoundHostProperties(directiveSummary, hostBindingSourceSpan);
     const bindingContext = importExpr(Identifiers$1.load).callFn([variable('dirIndex')]);
     if (bindings) {
-        const valueConverter = new ValueConverter(constantPool, 
-        /* new nodes are illegal here */ () => error('Unexpected node'), allocatePureFunctionSlots, 
+        const valueConverter = new ValueConverter(constantPool,
+        /* new nodes are illegal here */ () => error('Unexpected node'), allocatePureFunctionSlots,
         /* pipes are illegal here */ () => error('Unexpected pipe'));
         for (const binding of bindings) {
             // resolve literal arrays and literal objects
@@ -31094,7 +31103,7 @@ class NgModuleProviderAnalyzer {
             const ngModuleProvider = { token: { identifier: ngModuleType }, useClass: ngModuleType };
             _resolveProviders([ngModuleProvider], ProviderAstType.PublicService, true, sourceSpan, this._errors, this._allProviders, /* isModule */ true);
         });
-        _resolveProviders(ngModule.transitiveModule.providers.map(entry => entry.provider).concat(extraProviders), ProviderAstType.PublicService, false, sourceSpan, this._errors, this._allProviders, 
+        _resolveProviders(ngModule.transitiveModule.providers.map(entry => entry.provider).concat(extraProviders), ProviderAstType.PublicService, false, sourceSpan, this._errors, this._allProviders,
         /* isModule */ false);
     }
     parse() {
@@ -35798,7 +35807,7 @@ class StaticReflector {
                     const requiredAnnotationTypes = this.annotationForParentClassWithSummaryKind.get(summary.type.summaryKind);
                     const typeHasRequiredAnnotation = requiredAnnotationTypes.some((requiredType) => ownAnnotations.some(ann => requiredType.isTypeOf(ann)));
                     if (!typeHasRequiredAnnotation) {
-                        this.reportError(formatMetadataError(metadataError(`Class ${type.name} in ${type.filePath} extends from a ${CompileSummaryKind[summary.type.summaryKind]} in another compilation unit without duplicating the decorator`, 
+                        this.reportError(formatMetadataError(metadataError(`Class ${type.name} in ${type.filePath} extends from a ${CompileSummaryKind[summary.type.summaryKind]} in another compilation unit without duplicating the decorator`,
                         /* summary */ undefined, `Please add a ${requiredAnnotationTypes.map((type) => type.ngMetadataName).join(' or ')} decorator to the class`), type), type);
                     }
                 }
@@ -39660,7 +39669,7 @@ function resolveToken(token, record, records, parent, notFoundValue, flags) {
                     const childRecord = options & 2 /* CheckSelf */ ? records.get(depRecord.token) : undefined;
                     deps.push(tryResolveToken(
                     // Current Token to resolve
-                    depRecord.token, childRecord, records, 
+                    depRecord.token, childRecord, records,
                     // If we don't know how to resolve dependency and we should not check parent for it,
                     // than pass in Null injector.
                     !childRecord && !(options & 4 /* CheckParent */) ? NULL_INJECTOR : parent, options & 1 /* Optional */ ? null : Injector.THROW_IF_NOT_FOUND, 0 /* Default */));
@@ -51818,7 +51827,7 @@ const QueryList = /** @type {?} */ (QueryList_);
  * @param {?=} read What to save in the query
  * @return {?} QueryList<T>
  */
-function query(memoryIndex, predicate, descend, 
+function query(memoryIndex, predicate, descend,
 // TODO: "read" should be an AbstractType (FW-486)
 read) {
     ngDevMode && assertPreviousIsParent();

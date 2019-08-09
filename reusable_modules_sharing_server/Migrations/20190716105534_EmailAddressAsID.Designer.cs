@@ -9,8 +9,8 @@ using WidgetServer.Data;
 namespace WidgetServer.Migrations
 {
     [DbContext(typeof(WidgetsDataContext))]
-    [Migration("20190715074713_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20190716105534_EmailAddressAsID")]
+    partial class EmailAddressAsID
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -22,17 +22,16 @@ namespace WidgetServer.Migrations
 
             modelBuilder.Entity("WidgetServer.Models.User", b =>
                 {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("EmailAddress")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Familyname");
 
                     b.Property<string>("GoogleID");
 
                     b.Property<string>("Name");
 
-                    b.Property<string>("Surname");
-
-                    b.HasKey("ID");
+                    b.HasKey("EmailAddress");
 
                     b.ToTable("User");
                 });
