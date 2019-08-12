@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.FileProviders;
-using reusable_modules_sharing_server.Models;
-using reusable_modules_sharing_server.ViewModels;
+using System.Linq;
+using System.Threading.Tasks;
 using WidgetServer.Data;
 using WidgetServer.Models;
 using WidgetServer.ViewModels;
@@ -44,7 +34,7 @@ namespace WidgetServer.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUser([FromRoute] string id)
         {
-                if (!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
@@ -59,7 +49,6 @@ namespace WidgetServer.Controllers
             {
                 return NotFound();
             }
-
             return Ok(user);
         }
 
@@ -118,10 +107,11 @@ namespace WidgetServer.Controllers
             else
             {
                 var users = _context.Users
-               .Include(u => u.Widgets).Select(w => w.ToListViewModel());
+                .Where(u => u.Email == model.Email)
+               .Include(u => u.Widgets).Select(w => w.ToListViewModel()).FirstOrDefault();
                 return Ok(users);
             }
-            return CreatedAtAction("GetUser", new { id = user.Email }, user);
+            return CreatedAtAction("GetUser", new { id = user.Email }, user.ToListViewModel());
         }
 
         // DELETE: api/Users/5

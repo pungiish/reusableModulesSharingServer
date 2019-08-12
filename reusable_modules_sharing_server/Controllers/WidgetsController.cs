@@ -14,6 +14,8 @@ using Newtonsoft.Json.Linq;
 using reusable_modules_sharing_server.Models;
 using reusable_modules_sharing_server.ViewModels;
 using WidgetServer.Data;
+using WidgetServer.Models;
+using WidgetServer.ViewModels;
 
 namespace reusable_modules_sharing_server.Controllers
 {
@@ -31,14 +33,30 @@ namespace reusable_modules_sharing_server.Controllers
 
         // GET: api/widgets
         [HttpGet]
-        public async Task<IEnumerable<ListWidgetViewModel>> GetWidgets()
+        public async Task<IActionResult> GetWidgets([FromBody] UserViewModel userViewModel)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (userViewModel == null)
+                return NotFound();
+
+            var user = _context.Users.Find(userViewModel.Email).ToViewModel();
+
+            if (user == null)
+                return NotFound();
+
             var widgets = await _context.Widgets
-                .Include(w => w.User)
-                .Select(w => w.ToViewModel())
+                .Where(w => w.UserId == user.Email)
+                .Select(w => w.ToNewViewModel())
                 .ToListAsync();
 
-            return widgets;                
+            if (widgets == null)
+                return NotFound();
+
+            return Ok(widgets);                
         }
 
         // GET; api/widgets/{id}.js

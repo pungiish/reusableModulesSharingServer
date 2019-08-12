@@ -26,6 +26,16 @@ namespace reusable_modules_sharing_server.Models
     }
 
     public static class WidgetExtensions {
+
+        public static NewWidgetViewModel ToNewViewModel(this Widget model)
+        {
+            if (model == null)
+                return null;
+
+            var vm = Mapper.Map<NewWidgetViewModel>(model);
+            return vm;
+        }
+
         public static ListWidgetViewModel ToViewModel(this Widget model)
         {
             if (model == null)
@@ -35,6 +45,8 @@ namespace reusable_modules_sharing_server.Models
             vm.User = model.User.ToViewModel();
             return vm;
         }
+
+        
 
         public static ICollection<NewWidgetViewModel> ToViewModel(this ICollection<Widget> model)
         {
