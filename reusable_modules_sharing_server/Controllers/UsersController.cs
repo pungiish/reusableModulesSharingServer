@@ -117,8 +117,8 @@ namespace WidgetServer.Controllers
             }
             else
             {
-                var users = await _context.Users
-               .Include(u => u.Widgets).Select(w => w.ToListViewModel()).ToListAsync();
+                var users = _context.Users
+               .Include(u => u.Widgets).Select(w => w.ToListViewModel());
                 return Ok(users);
             }
             return CreatedAtAction("GetUser", new { id = user.Email }, user);

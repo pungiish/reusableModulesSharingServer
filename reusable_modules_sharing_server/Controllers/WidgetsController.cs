@@ -52,8 +52,13 @@ namespace reusable_modules_sharing_server.Controllers
             if (widget == null)
                 return NotFound();
             string format = string.Format(@"D:\Centiva\reusable_modules_sharing_server\reusable_modules_sharing_server\Assets\{0}.js", widget.Name);
-            string text = System.IO.File.ReadAllText(format);
-            return Content(text, "text/javascript");
+            using (var reader = System.IO.File.OpenText(format))
+            {
+                var fileText = await reader.ReadToEndAsync();
+                fileText = fileText.Replace("colour", "'" + widget.Color + "'");
+                return Content(fileText, "text/javascript");
+            }
+
         }
 
         // POST: api/widgets/new
@@ -67,17 +72,29 @@ namespace reusable_modules_sharing_server.Controllers
                 return BadRequest(ModelState);
             }
 
-            var user = _context.Users.Find(viewmodel.UserId);
+            var user = _context.Users
+                .Find(viewmodel.UserId);
+
+            user.Widgets = await _context.Widgets
+                .Where(w => w.User == user).ToListAsync();
+
             if (user == null)
                 return NotFound();
 
             var widget = viewmodel.ToModel();
             widget.UserId = user.Email;
+            var widgetExists = user.Widgets
+                .Where(w => w.Color == widget.Color &&
+                w.Name == widget.Name &&
+                w.UserId == widget.UserId).SingleOrDefault();
+            if (widgetExists != null)
+            {
+                return Ok(JsonConvert.SerializeObject(widgetExists.Id));
+            }
+
             _context.Widgets.Add(widget);
             await _context.SaveChangesAsync();
-
-            string id = JsonConvert.SerializeObject(widget.Id);
-            return Ok(id);
+            return Ok(JsonConvert.SerializeObject(widget.Id));
 
         }
 

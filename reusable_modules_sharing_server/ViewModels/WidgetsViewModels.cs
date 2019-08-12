@@ -7,6 +7,7 @@ namespace reusable_modules_sharing_server.ViewModels
 {
     public class NewWidgetViewModel
     {
+        public string Id { get; set; }
         public string Name { get; set; }
         public string Color { get; set; }
         public string UserId { get; set; }
