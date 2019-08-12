@@ -51,7 +51,9 @@ namespace WidgetServer.Controllers
 
             var user = await _context.Users
                 .Include(u => u.Widgets)
-                .Select(u => u.ToListViewModel()).ToListAsync();
+                .Select(u => u.ToListViewModel())
+                .Where(u => u.Email == id)
+                .FirstOrDefaultAsync();
 
             if (user == null)
             {

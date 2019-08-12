@@ -45,7 +45,7 @@ namespace reusable_modules_sharing_server.Controllers
         // returns javascript f
         [Route("{id}.js")]
         [HttpGet]
-        public IActionResult CreateUri([FromRoute] string id)
+        public async Task<IActionResult> CreateUri([FromRoute] string id)
         {
             var widget = _context.Widgets.Where(
                 w => w.Id == id).FirstOrDefault();
