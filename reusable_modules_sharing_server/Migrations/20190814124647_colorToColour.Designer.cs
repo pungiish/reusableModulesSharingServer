@@ -9,8 +9,8 @@ using WidgetServer.Data;
 namespace WidgetServer.Migrations
 {
     [DbContext(typeof(WidgetsDataContext))]
-    [Migration("20190806124630_RemovedUserE")]
-    partial class RemovedUserE
+    [Migration("20190814124647_colorToColour")]
+    partial class colorToColour
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -25,15 +25,16 @@ namespace WidgetServer.Migrations
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Colour");
+                    b.Property<string>("Colour")
+                        .HasColumnName("Colour");
 
                     b.Property<string>("Name");
 
-                    b.Property<string>("Username");
-
-                    b.Property<string>("Widget");
+                    b.Property<string>("UserId");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Widget");
                 });
@@ -58,7 +59,7 @@ namespace WidgetServer.Migrations
                 {
                     b.HasOne("WidgetServer.Models.User", "User")
                         .WithMany("Widgets")
-                        .HasForeignKey("Username");
+                        .HasForeignKey("UserId");
                 });
 #pragma warning restore 612, 618
         }

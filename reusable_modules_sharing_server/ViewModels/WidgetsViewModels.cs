@@ -9,7 +9,8 @@ namespace reusable_modules_sharing_server.ViewModels
     {
         public string Id { get; set; }
         public string Name { get; set; }
-        public string Color { get; set; }
+        public string Colour { get; set; }
+        public string Text { get; set; }
         public string UserId { get; set; }
     }
 
@@ -17,7 +18,8 @@ namespace reusable_modules_sharing_server.ViewModels
     {
         public string Id { get; set; }
         public string Name { get; set; }
-        public string Color { get; set; }
+        public string Colour { get; set; }
+        public string Text { get; set; }
         public string UserId { get; set; }
 
     }
@@ -26,7 +28,8 @@ namespace reusable_modules_sharing_server.ViewModels
     {
         public string Id { get; set; }
         public string Name { get; set; }
-        public string Color { get; set; }
+        public string Colour { get; set; }
+        public string Text { get; set; }
         public UserViewModel User { get; set; }
     }
 

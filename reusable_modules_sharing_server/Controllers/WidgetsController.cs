@@ -32,18 +32,19 @@ namespace reusable_modules_sharing_server.Controllers
         }
 
         // GET: api/widgets
+        [Route("{id}")]
         [HttpGet]
-        public async Task<IActionResult> GetWidgets([FromBody] UserViewModel userViewModel)
+        public async Task<IActionResult> GetWidgets([FromRoute] string id)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (userViewModel == null)
+            if (id == null)
                 return NotFound();
 
-            var user = _context.Users.Find(userViewModel.Email).ToViewModel();
+            var user = _context.Users.Find(id).ToViewModel();
 
             if (user == null)
                 return NotFound();
@@ -51,6 +52,7 @@ namespace reusable_modules_sharing_server.Controllers
             var widgets = await _context.Widgets
                 .Where(w => w.UserId == user.Email)
                 .Select(w => w.ToNewViewModel())
+                .OrderBy(w => w.Colour)
                 .ToListAsync();
 
             if (widgets == null)
@@ -73,7 +75,11 @@ namespace reusable_modules_sharing_server.Controllers
             using (var reader = System.IO.File.OpenText(format))
             {
                 var fileText = await reader.ReadToEndAsync();
-                fileText = fileText.Replace("colour", "'" + widget.Color + "'");
+                if(widget.Colour != null)
+                    fileText = fileText.Replace("colour", "'" + widget.Colour + "'");
+                if(widget.Text != null)
+                    fileText = fileText.Replace("circleText", "'" + widget.Text + "'");
+
                 return Content(fileText, "text/javascript");
             }
 
@@ -89,21 +95,23 @@ namespace reusable_modules_sharing_server.Controllers
             {
                 return BadRequest(ModelState);
             }
-
             var user = _context.Users
                 .Find(viewmodel.UserId);
-
-            user.Widgets = await _context.Widgets
-                .Where(w => w.User == user).ToListAsync();
 
             if (user == null)
                 return NotFound();
 
+            user.Widgets = await _context.Widgets
+                .Where(w => w.User == user).ToListAsync();
+
+           
+
             var widget = viewmodel.ToModel();
             widget.UserId = user.Email;
             var widgetExists = user.Widgets
-                .Where(w => w.Color == widget.Color &&
+                .Where(w => w.Colour == widget.Colour &&
                 w.Name == widget.Name &&
+                w.Text == widget.Text &&
                 w.UserId == widget.UserId).SingleOrDefault();
             if (widgetExists != null)
             {

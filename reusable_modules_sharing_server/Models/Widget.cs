@@ -16,7 +16,8 @@ namespace reusable_modules_sharing_server.Models
         [Key]
         public string Id { get; set; }
         public string Name { get; set; }
-        public string Color { get; set; }
+        public string Colour { get; set; }
+        public string Text { get; set; }
 
         [ForeignKey("User")]
         public string UserId { get; set; }

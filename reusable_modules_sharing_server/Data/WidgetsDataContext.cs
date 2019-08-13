@@ -14,8 +14,6 @@ namespace WidgetServer.Data
         {
             modelBuilder.Entity<User>().ToTable("User");
             modelBuilder.Entity<Widget>().ToTable("Widget");
-           
-           
         }
 
     }

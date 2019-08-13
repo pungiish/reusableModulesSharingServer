@@ -12,7 +12,7 @@ namespace WidgetServer.Migrations
                 {
                     Id = table.Column<string>(nullable: false),
                     Name = table.Column<string>(nullable: true),
-                    Color = table.Column<string>(nullable: true),
+                    Colour = table.Column<string>(nullable: true),
                     Username = table.Column<string>(nullable: true)
                 },
                 constraints: table =>

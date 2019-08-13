@@ -23,9 +23,11 @@ namespace WidgetServer.Migrations
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Color");
+                    b.Property<string>("Colour");
 
                     b.Property<string>("Name");
+
+                    b.Property<string>("Text");
 
                     b.Property<string>("UserId");
 

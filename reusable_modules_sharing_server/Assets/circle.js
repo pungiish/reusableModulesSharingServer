@@ -1,6 +1,6 @@
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// install a JSONP callback for chunk loading
-/******/ 	function webpackjsonp1Callback(data) {
+/******/ 	function webpackJsonp2Callback(data) {
 /******/ 		var chunkIds = data[0];
 /******/ 		var moreModules = data[1];
 /******/ 		var executeModules = data[2];
@@ -138,11 +138,11 @@
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
-/******/ 	var jsonpArray = window["webpackjsonp1"] = window["webpackjsonp1"] || [];
+/******/ 	var jsonpArray = window["webpackJsonp2"] = window["webpackJsonp2"] || [];
 /******/ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
-/******/ 	jsonpArray.push = webpackjsonp1Callback;
+/******/ 	jsonpArray.push = webpackJsonp2Callback;
 /******/ 	jsonpArray = jsonpArray.slice();
-/******/ 	for(var i = 0; i < jsonpArray.length; i++) webpackjsonp1Callback(jsonpArray[i]);
+/******/ 	for(var i = 0; i < jsonpArray.length; i++) webpackJsonp2Callback(jsonpArray[i]);
 /******/ 	var parentJsonpFunction = oldJsonpFunction;
 /******/
 /******/
@@ -152,7 +152,7 @@
 /************************************************************************/
 /******/ ([]);
 //# sourceMappingURL=runtime.js.map
-(window["webpackjsonp1"] = window["webpackjsonp1"] || []).push([["polyfills"],{
+(window["webpackJsonp2"] = window["webpackJsonp2"] || []).push([["polyfills"],{
 
 /***/ "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js":
 /*!**************************************************************************************************!*\
@@ -5954,15 +5954,15 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Centiva\CustomElements\LoginElement\src\polyfills.ts */"./src/polyfills.ts");
-module.exports = __webpack_require__(/*! D:\Centiva\CustomElements\LoginElement\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\jit-polyfills.js */"./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js");
+__webpack_require__(/*! D:\Centiva\CustomElements\CircleElement\src\polyfills.ts */"./src/polyfills.ts");
+module.exports = __webpack_require__(/*! D:\Centiva\CustomElements\CircleElement\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\jit-polyfills.js */"./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js");
 
 
 /***/ })
 
 },[[1,"runtime"]]]);
 //# sourceMappingURL=polyfills.js.map
-(window["webpackjsonp1"] = window["webpackjsonp1"] || []).push([["main"],{
+(window["webpackJsonp2"] = window["webpackJsonp2"] || []).push([["main"],{
 
 /***/ "./src/$$_lazy_route_resource lazy recursive":
 /*!**********************************************************!*\
@@ -5994,7 +5994,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".box {\r\n\twidth: 1%;\r\n\tpadding:50px;\r\n}\r\n\r\n\r\n\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Q0FDQyxVQUFVO0NBQ1YsYUFBYTtDQUNiIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYm94IHtcclxuXHR3aWR0aDogMSU7XHJcblx0cGFkZGluZzo1MHB4O1xyXG59XHJcblxyXG5cclxuXHJcbiJdfQ== */"
+module.exports = ".circle\r\n{\r\n  width:100px;\r\n  height:100px;\r\n  border-radius: 50%;\r\n  text-align: center;\r\n  text-anchor: middle;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0VBRUUsWUFBWTtFQUNaLGFBQWE7RUFDYixtQkFBbUI7RUFDbkIsbUJBQW1CO0VBQ25CLG9CQUFvQjtDQUNyQiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNpcmNsZVxyXG57XHJcbiAgd2lkdGg6MTAwcHg7XHJcbiAgaGVpZ2h0OjEwMHB4O1xyXG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgdGV4dC1hbmNob3I6IG1pZGRsZTtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -6005,7 +6005,7 @@ module.exports = ".box {\r\n\twidth: 1%;\r\n\tpadding:50px;\r\n}\r\n\r\n\r\n\r\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n\t<div class=\"box\" [ngStyle]=\"{background: colour}\"></div>\n</div>\n"
+module.exports = "<div class=\"circle\" style.background=\"{{this.colour}}\" [innerHTML]=\"this.circletext | htmlChange\"></div>\n"
 
 /***/ }),
 
@@ -6032,21 +6032,26 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 let AppComponent = class AppComponent {
     constructor() {
-        this.title = 'LoginElement';
+        this.title = 'CircleElement';
     }
     ngOnInit() {
+    }
+    ngOnChanges() {
     }
 };
 __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
     __metadata("design:type", String)
 ], AppComponent.prototype, "colour", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String)
+], AppComponent.prototype, "circletext", void 0);
 AppComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
         selector: 'app-root',
         template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
-        styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")],
-        encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewEncapsulation"].None
+        styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
     })
 ], AppComponent);
 
@@ -6068,6 +6073,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_elements__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/elements */ "./node_modules/@angular/elements/fesm2015/elements.js");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _html_change_pipe__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./html-change.pipe */ "./src/app/html-change.pipe.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6081,18 +6087,20 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 let AppModule = class AppModule {
     constructor(injector) {
         this.injector = injector;
         const el = Object(_angular_elements__WEBPACK_IMPORTED_MODULE_2__["createCustomElement"])(_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], { injector: this.injector });
-        customElements.define('element-el', el);
+        customElements.define('circle-element', el);
     }
     ngDoBootstrap() { }
 };
 AppModule = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         declarations: [
-            _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]
+            _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
+            _html_change_pipe__WEBPACK_IMPORTED_MODULE_4__["HtmlChangePipe"],
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"]
@@ -6100,9 +6108,60 @@ AppModule = __decorate([
         entryComponents: [
             _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]
         ],
+        providers: [],
     }),
     __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"]])
 ], AppModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/html-change.pipe.ts":
+/*!*************************************!*\
+  !*** ./src/app/html-change.pipe.ts ***!
+  \*************************************/
+/*! exports provided: HtmlChangePipe */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HtmlChangePipe", function() { return HtmlChangePipe; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+let HtmlChangePipe = class HtmlChangePipe {
+    constructor() {
+        this.outputText = "";
+    }
+    transform(value, args) {
+        if (value == undefined)
+            return this.outputText;
+        if (value.length > 4) {
+            for (let i = 5; i <= value.length; i = i + 5) {
+                if (i + 5 > value.length) {
+                    this.outputText = this.outputText.concat(value.slice(i - 5, i).concat('<br/>'));
+                    this.outputText = this.outputText.concat(value.slice(i, value.length).concat('<br/>'));
+                    break;
+                }
+                this.outputText = this.outputText.concat(value.slice(i - 5, i).concat('<br/>'));
+            }
+        }
+        else
+            this.outputText = value;
+        return this.outputText;
+    }
+};
+HtmlChangePipe = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({
+        name: 'htmlChange'
+    })
+], HtmlChangePipe);
 
 
 
@@ -6169,14 +6228,14 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Centiva\CustomElements\LoginElement\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! D:\Centiva\CustomElements\CircleElement\src\main.ts */"./src/main.ts");
 
 
 /***/ })
 
 },[[0,"runtime","vendor"]]]);
 //# sourceMappingURL=main.js.map
-(window["webpackjsonp1"] = window["webpackjsonp1"] || []).push([["styles"],{
+(window["webpackJsonp2"] = window["webpackJsonp2"] || []).push([["styles"],{
 
 /***/ "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src/index.js?!./src/styles.css":
 /*!*****************************************************************************************************************************************************************!*\
@@ -6733,14 +6792,14 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Centiva\CustomElements\LoginElement\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! D:\Centiva\CustomElements\CircleElement\src\styles.css */"./src/styles.css");
 
 
 /***/ })
 
 },[[2,"runtime"]]]);
 //# sourceMappingURL=styles.js.map
-(window["webpackjsonp1"] = window["webpackjsonp1"] || []).push([["vendor"],{
+(window["webpackJsonp2"] = window["webpackJsonp2"] || []).push([["vendor"],{
 
 /***/ "./node_modules/@angular/common/fesm2015/common.js":
 /*!*********************************************************!*\
@@ -18537,15 +18596,15 @@ function compileNgModuleFromRender2(ctx, ngModule, injectableCompiler) {
     });
     const injectorDef = importExpr(Identifiers$1.defineInjector).callFn([injectorDefArg]);
     ctx.statements.push(new ClassStmt(
-    /* name */ className,
-    /* parent */ null,
+    /* name */ className, 
+    /* parent */ null, 
     /* fields */ [new ClassField(
-        /* name */ 'ngInjectorDef',
-        /* type */ INFERRED_TYPE,
-        /* modifiers */ [StmtModifier.Static],
-        /* initializer */ injectorDef)],
-    /* getters */ [],
-    /* constructorMethod */ new ClassMethod(null, [], []),
+        /* name */ 'ngInjectorDef', 
+        /* type */ INFERRED_TYPE, 
+        /* modifiers */ [StmtModifier.Static], 
+        /* initializer */ injectorDef)], 
+    /* getters */ [], 
+    /* constructorMethod */ new ClassMethod(null, [], []), 
     /* methods */ []));
 }
 function tupleTypeOf(exp) {
@@ -18600,15 +18659,15 @@ function compilePipeFromRender2(outputCtx, pipe, reflector) {
     const res = compilePipeFromMetadata(metadata);
     const definitionField = outputCtx.constantPool.propertyNameOf(3 /* Pipe */);
     outputCtx.statements.push(new ClassStmt(
-    /* name */ name,
-    /* parent */ null,
+    /* name */ name, 
+    /* parent */ null, 
     /* fields */ [new ClassField(
-        /* name */ definitionField,
-        /* type */ INFERRED_TYPE,
-        /* modifiers */ [StmtModifier.Static],
-        /* initializer */ res.expression)],
-    /* getters */ [],
-    /* constructorMethod */ new ClassMethod(null, [], []),
+        /* name */ definitionField, 
+        /* type */ INFERRED_TYPE, 
+        /* modifiers */ [StmtModifier.Static], 
+        /* initializer */ res.expression)], 
+    /* getters */ [], 
+    /* constructorMethod */ new ClassMethod(null, [], []), 
     /* methods */ []));
 }
 
@@ -19307,7 +19366,7 @@ class ConvertActionBindingResult {
     /**
      * Render2 compatible statements,
      */
-    stmts,
+    stmts, 
     /**
      * Variable name used with render2 compatible statements.
      */
@@ -23352,7 +23411,7 @@ const SCHEMA = [
     'audio^media|',
     'br^[HTMLElement]|clear',
     'base^[HTMLElement]|href,target',
-    'body^[HTMLElement]|aLink,background,bgColour,link,*beforeunload,*blur,*error,*focus,*hashchange,*languagechange,*load,*message,*offline,*online,*pagehide,*pageshow,*popstate,*rejectionhandled,*resize,*scroll,*storage,*unhandledrejection,*unload,text,vLink',
+    'body^[HTMLElement]|aLink,background,bgColor,link,*beforeunload,*blur,*error,*focus,*hashchange,*languagechange,*load,*message,*offline,*online,*pagehide,*pageshow,*popstate,*rejectionhandled,*resize,*scroll,*storage,*unhandledrejection,*unload,text,vLink',
     'button^[HTMLElement]|!autofocus,!disabled,formAction,formEnctype,formMethod,!formNoValidate,formTarget,name,type,value',
     'canvas^[HTMLElement]|#height,#width',
     'content^[HTMLElement]|select',
@@ -23364,11 +23423,11 @@ const SCHEMA = [
     'div^[HTMLElement]|align',
     'embed^[HTMLElement]|align,height,name,src,type,width',
     'fieldset^[HTMLElement]|!disabled,name',
-    'font^[HTMLElement]|Colour,face,size',
+    'font^[HTMLElement]|color,face,size',
     'form^[HTMLElement]|acceptCharset,action,autocomplete,encoding,enctype,method,name,!noValidate,target',
     'frame^[HTMLElement]|frameBorder,longDesc,marginHeight,marginWidth,name,!noResize,scrolling,src',
     'frameset^[HTMLElement]|cols,*beforeunload,*blur,*error,*focus,*hashchange,*languagechange,*load,*message,*offline,*online,*pagehide,*pageshow,*popstate,*rejectionhandled,*resize,*scroll,*storage,*unhandledrejection,*unload,rows',
-    'hr^[HTMLElement]|align,Colour,!noShade,size,width',
+    'hr^[HTMLElement]|align,color,!noShade,size,width',
     'head^[HTMLElement]|',
     'h1,h2,h3,h4,h5,h6^[HTMLElement]|align',
     'html^[HTMLElement]|version',
@@ -23380,7 +23439,7 @@ const SCHEMA = [
     'legend^[HTMLElement]|align',
     'link^[HTMLElement]|as,charset,%crossOrigin,!disabled,href,hreflang,integrity,media,referrerPolicy,rel,%relList,rev,%sizes,target,type',
     'map^[HTMLElement]|name',
-    'marquee^[HTMLElement]|behavior,bgColour,direction,height,#hspace,#loop,#scrollAmount,#scrollDelay,!trueSpeed,#vspace,width',
+    'marquee^[HTMLElement]|behavior,bgColor,direction,height,#hspace,#loop,#scrollAmount,#scrollDelay,!trueSpeed,#vspace,width',
     'menu^[HTMLElement]|!compact',
     'meta^[HTMLElement]|content,httpEquiv,name,scheme',
     'meter^[HTMLElement]|#high,#low,#max,#min,#optimum,#value',
@@ -23404,10 +23463,10 @@ const SCHEMA = [
     'span^[HTMLElement]|',
     'style^[HTMLElement]|!disabled,media,type',
     'caption^[HTMLElement]|align',
-    'th,td^[HTMLElement]|abbr,align,axis,bgColour,ch,chOff,#colSpan,headers,height,!noWrap,#rowSpan,scope,vAlign,width',
+    'th,td^[HTMLElement]|abbr,align,axis,bgColor,ch,chOff,#colSpan,headers,height,!noWrap,#rowSpan,scope,vAlign,width',
     'col,colgroup^[HTMLElement]|align,ch,chOff,#span,vAlign,width',
-    'table^[HTMLElement]|align,bgColour,border,%caption,cellPadding,cellSpacing,frame,rules,summary,%tFoot,%tHead,width',
-    'tr^[HTMLElement]|align,bgColour,ch,chOff,vAlign',
+    'table^[HTMLElement]|align,bgColor,border,%caption,cellPadding,cellSpacing,frame,rules,summary,%tFoot,%tHead,width',
+    'tr^[HTMLElement]|align,bgColor,ch,chOff,vAlign',
     'tfoot,thead,tbody^[HTMLElement]|align,ch,chOff,vAlign',
     'template^[HTMLElement]|',
     'textarea^[HTMLElement]|autocapitalize,!autofocus,#cols,defaultValue,dirName,!disabled,#maxLength,#minLength,name,placeholder,!readOnly,!required,#rows,selectionDirection,#selectionEnd,#selectionStart,value,wrap',
@@ -23427,7 +23486,7 @@ const SCHEMA = [
     ':svg:discard^:svg:|',
     ':svg:ellipse^:svg:geometry|',
     ':svg:feBlend^:svg:|',
-    ':svg:feColourMatrix^:svg:|',
+    ':svg:feColorMatrix^:svg:|',
     ':svg:feComponentTransfer^:svg:|',
     ':svg:feComposite^:svg:|',
     ':svg:feConvolveMatrix^:svg:|',
@@ -24531,7 +24590,7 @@ class NonBindableVisitor {
             return null;
         }
         const children = visitAll(this, ast.children, null);
-        return new Element$1(ast.name, visitAll(this, ast.attrs),
+        return new Element$1(ast.name, visitAll(this, ast.attrs), 
         /* inputs */ [], /* outputs */ [], children, /* references */ [], ast.sourceSpan, ast.startSourceSpan, ast.endSourceSpan);
     }
     visitComment(comment) { return null; }
@@ -24564,8 +24623,8 @@ function isEmptyTextNode(node) {
  * Parses string representation of a style and converts it into object literal.
  *
  * @param value string representation of style as used in the `style` attribute in HTML.
- *   Example: `Colour: red; height: auto`.
- * @returns an object literal. `{ Colour: 'red', height: 'auto'}`.
+ *   Example: `color: red; height: auto`.
+ * @returns an object literal. `{ color: 'red', height: 'auto'}`.
  */
 function parseStyle(value) {
     const styles = {};
@@ -25980,7 +26039,7 @@ function compileComponentFromMetadata(meta, constantPool, bindingParser) {
     if (firstSelector) {
         const selectorAttributes = firstSelector.getAttrs();
         if (selectorAttributes.length) {
-            definitionMap.set('attrs', constantPool.getConstLiteral(literalArr(selectorAttributes.map(value => value != null ? literal(value) : literal(undefined))),
+            definitionMap.set('attrs', constantPool.getConstLiteral(literalArr(selectorAttributes.map(value => value != null ? literal(value) : literal(undefined))), 
             /* forceShared */ true));
         }
     }
@@ -26280,8 +26339,8 @@ function createHostBindingsFunction(meta, bindingParser, constantPool, allocateP
     const bindings = bindingParser.createBoundHostProperties(directiveSummary, hostBindingSourceSpan);
     const bindingContext = importExpr(Identifiers$1.load).callFn([variable('dirIndex')]);
     if (bindings) {
-        const valueConverter = new ValueConverter(constantPool,
-        /* new nodes are illegal here */ () => error('Unexpected node'), allocatePureFunctionSlots,
+        const valueConverter = new ValueConverter(constantPool, 
+        /* new nodes are illegal here */ () => error('Unexpected node'), allocatePureFunctionSlots, 
         /* pipes are illegal here */ () => error('Unexpected pipe'));
         for (const binding of bindings) {
             // resolve literal arrays and literal objects
@@ -31103,7 +31162,7 @@ class NgModuleProviderAnalyzer {
             const ngModuleProvider = { token: { identifier: ngModuleType }, useClass: ngModuleType };
             _resolveProviders([ngModuleProvider], ProviderAstType.PublicService, true, sourceSpan, this._errors, this._allProviders, /* isModule */ true);
         });
-        _resolveProviders(ngModule.transitiveModule.providers.map(entry => entry.provider).concat(extraProviders), ProviderAstType.PublicService, false, sourceSpan, this._errors, this._allProviders,
+        _resolveProviders(ngModule.transitiveModule.providers.map(entry => entry.provider).concat(extraProviders), ProviderAstType.PublicService, false, sourceSpan, this._errors, this._allProviders, 
         /* isModule */ false);
     }
     parse() {
@@ -35807,7 +35866,7 @@ class StaticReflector {
                     const requiredAnnotationTypes = this.annotationForParentClassWithSummaryKind.get(summary.type.summaryKind);
                     const typeHasRequiredAnnotation = requiredAnnotationTypes.some((requiredType) => ownAnnotations.some(ann => requiredType.isTypeOf(ann)));
                     if (!typeHasRequiredAnnotation) {
-                        this.reportError(formatMetadataError(metadataError(`Class ${type.name} in ${type.filePath} extends from a ${CompileSummaryKind[summary.type.summaryKind]} in another compilation unit without duplicating the decorator`,
+                        this.reportError(formatMetadataError(metadataError(`Class ${type.name} in ${type.filePath} extends from a ${CompileSummaryKind[summary.type.summaryKind]} in another compilation unit without duplicating the decorator`, 
                         /* summary */ undefined, `Please add a ${requiredAnnotationTypes.map((type) => type.ngMetadataName).join(' or ')} decorator to the class`), type), type);
                     }
                 }
@@ -39669,7 +39728,7 @@ function resolveToken(token, record, records, parent, notFoundValue, flags) {
                     const childRecord = options & 2 /* CheckSelf */ ? records.get(depRecord.token) : undefined;
                     deps.push(tryResolveToken(
                     // Current Token to resolve
-                    depRecord.token, childRecord, records,
+                    depRecord.token, childRecord, records, 
                     // If we don't know how to resolve dependency and we should not check parent for it,
                     // than pass in Null injector.
                     !childRecord && !(options & 4 /* CheckParent */) ? NULL_INJECTOR : parent, options & 1 /* Optional */ ? null : Injector.THROW_IF_NOT_FOUND, 0 /* Default */));
@@ -43052,7 +43111,7 @@ function allocStylingContext(element, templateStyleContext) {
  *
  * This method lazily creates the `StylingContext`. This is because in most cases
  * we have styling without any bindings. Creating `StylingContext` eagerly would mean that
- * every style declaration such as `<div style="Colour: red">` would result `StyleContext`
+ * every style declaration such as `<div style="color: red">` would result `StyleContext`
  * which would create unnecessary memory pressure.
  *
  * @param {?} index Index of the style allocation. See: `elementStyling`.
@@ -51827,7 +51886,7 @@ const QueryList = /** @type {?} */ (QueryList_);
  * @param {?=} read What to save in the query
  * @return {?} QueryList<T>
  */
-function query(memoryIndex, predicate, descend,
+function query(memoryIndex, predicate, descend, 
 // TODO: "read" should be an AbstractType (FW-486)
 read) {
     ngDevMode && assertPreviousIsParent();
@@ -52316,7 +52375,7 @@ const URI_ATTRS = tagSet('background,cite,href,itemtype,longdesc,poster,src,xlin
 /** @type {?} */
 const SRCSET_ATTRS = tagSet('srcset');
 /** @type {?} */
-const HTML_ATTRS = tagSet('abbr,accesskey,align,alt,autoplay,axis,bgColour,border,cellpadding,cellspacing,class,clear,Colour,cols,colspan,' +
+const HTML_ATTRS = tagSet('abbr,accesskey,align,alt,autoplay,axis,bgcolor,border,cellpadding,cellspacing,class,clear,color,cols,colspan,' +
     'compact,controls,coords,datetime,default,dir,download,face,headers,height,hidden,hreflang,hspace,' +
     'ismap,itemscope,itemprop,kind,label,lang,language,loop,media,muted,nohref,nowrap,open,preload,rel,rev,role,rows,rowspan,rules,' +
     'scope,scrolling,shape,size,sizes,span,srclang,start,summary,tabindex,target,title,translate,type,usemap,' +
@@ -52587,7 +52646,7 @@ const VALUES = '[-,."\'%_!# a-zA-Z0-9]+';
 /** @type {?} */
 const TRANSFORMATION_FNS = '(?:matrix|translate|scale|rotate|skew|perspective)(?:X|Y|3d)?';
 /** @type {?} */
-const Colour_FNS = '(?:rgb|hsl)a?';
+const COLOR_FNS = '(?:rgb|hsl)a?';
 /** @type {?} */
 const GRADIENTS = '(?:repeating-)?(?:linear|radial)-gradient';
 /** @type {?} */
@@ -52596,7 +52655,7 @@ const CSS3_FNS = '(?:calc|attr)';
 const FN_ARGS = '\\([-0-9.%, #a-zA-Z]+\\)';
 /** @type {?} */
 const SAFE_STYLE_VALUE = new RegExp(`^(${VALUES}|` +
-    `(?:${TRANSFORMATION_FNS}|${Colour_FNS}|${GRADIENTS}|${CSS3_FNS})` +
+    `(?:${TRANSFORMATION_FNS}|${COLOR_FNS}|${GRADIENTS}|${CSS3_FNS})` +
     `${FN_ARGS})$`, 'g');
 /** *
  * Matches a `url(...)` value with an arbitrary argument as long as it does
@@ -65402,7 +65461,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 /**
- * @license Angular v8.1.0
+ * @license Angular v8.2.2
  * (c) 2010-2019 Google LLC. https://angular.io/
  * License: MIT
  */
@@ -65413,7 +65472,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 const ɵ0 = /**
  * @return {?}
@@ -65522,6 +65581,19 @@ function isFunction(value) {
     return typeof value === 'function';
 }
 /**
+ * Convert a kebab-cased string to camelCased.
+ * @param {?} input
+ * @return {?}
+ */
+function kebabToCamelCase(input) {
+    return input.replace(/-([a-z\d])/g, (/**
+     * @param {?} _
+     * @param {?} char
+     * @return {?}
+     */
+    (_, char) => char.toUpperCase()));
+}
+/**
  * Check whether an `Element` matches a CSS selector.
  * @param {?} element
  * @param {?} selector
@@ -65573,7 +65645,7 @@ function getComponentInputs(component, injector) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * @param {?} host
@@ -65641,7 +65713,7 @@ function findMatchingIndex(node, selectors, defaultIndex) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * Time in milliseconds to wait before destroying the component ref when disconnected.
@@ -65673,6 +65745,7 @@ class ComponentNgElementStrategyFactory {
         return new ComponentNgElementStrategy(this.componentFactory, injector);
     }
 }
+if (false) {}
 /**
  * Creates and destroys a component ref using a component factory and handles change detection
  * in response to input changes.
@@ -65771,11 +65844,11 @@ class ComponentNgElementStrategy {
      * @return {?}
      */
     setInputValue(property, value) {
-        if (strictEquals(value, this.getInputValue(property))) {
-            return;
-        }
         if (!this.componentRef) {
             this.initialInputValues.set(property, value);
+            return;
+        }
+        if (strictEquals(value, this.getInputValue(property))) {
             return;
         }
         this.recordInputChange(property, value);
@@ -65815,10 +65888,8 @@ class ComponentNgElementStrategy {
          * @return {?}
          */
         ({ propName }) => {
-            /** @type {?} */
-            const initialValue = this.initialInputValues.get(propName);
-            if (initialValue) {
-                this.setInputValue(propName, initialValue);
+            if (this.initialInputValues.has(propName)) {
+                this.setInputValue(propName, this.initialInputValues.get(propName));
             }
             else {
                 // Keep track of inputs that were not initialized in case we need to know this for
@@ -65927,11 +65998,23 @@ class ComponentNgElementStrategy {
         (/** @type {?} */ (this.componentRef)).changeDetectorRef.detectChanges();
     }
 }
+if (false) {}
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * Prototype for a class constructor based on an Angular component
+ * that can be used for custom element registration. Implemented and returned
+ * by the {\@link createCustomElement createCustomElement() function}.
+ *
+ * \@publicApi
+ * @record
+ * @template P
+ */
+function NgElementConstructor() { }
+if (false) {}
 /**
  * Implements the functionality needed for a custom element.
  *
@@ -65947,6 +66030,17 @@ class NgElement extends HTMLElement {
         this.ngElementEventsSubscription = null;
     }
 }
+if (false) {}
+/**
+ * A configuration that initializes an NgElementConstructor with the
+ * dependencies and strategy it needs to transform a component into
+ * a custom element class.
+ *
+ * \@publicApi
+ * @record
+ */
+function NgElementConfig() { }
+if (false) {}
 /**
  * \@description Creates a custom element class based on an Angular component.
  *
@@ -66037,6 +66131,7 @@ function createCustomElement(component, config) {
     // Work around a bug in closure typed optimizations(b/79557487) where it is not honoring static
     // field externs. So using quoted access to explicitly prevent renaming.
     NgElementImpl['observedAttributes'] = Object.keys(attributeToPropertyInputs);
+    if (false) {}
     // Add getters and setters to the prototype for each property input. If the config does not
     // contain property inputs, use all inputs by default.
     inputs.map((/**
@@ -66067,22 +66162,22 @@ function createCustomElement(component, config) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@publicApi
  * @type {?}
  */
-const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Version"]('8.1.0');
+const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Version"]('8.2.2');
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
 /**
