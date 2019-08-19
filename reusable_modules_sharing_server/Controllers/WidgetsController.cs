@@ -124,10 +124,36 @@ namespace reusable_modules_sharing_server.Controllers
 
         }
 
-
-        private bool UserExists(string emailAddress)
+        // PUT: api/widgets/update
+        [HttpPut("update")]
+        public async Task<IActionResult> PutUser([FromBody] UpdateWidgetViewModel viewModel)
         {
-            return _context.Users.Any(e => e.Email == emailAddress);
+            var widget = viewModel.ToModel();
+            widget.User = _context.Users.FirstOrDefault(u => u.Email == widget.UserId);
+            _context.Entry(widget).State = EntityState.Modified;
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!WidgetExists(widget.Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return Ok();
+        }
+
+
+        private bool WidgetExists(string id)
+        {
+            return _context.Widgets.Any(w => w.Id == id);
         }
     }
 

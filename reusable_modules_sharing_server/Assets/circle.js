@@ -6034,10 +6034,6 @@ let AppComponent = class AppComponent {
     constructor() {
         this.title = 'CircleElement';
     }
-    ngOnInit() {
-    }
-    ngOnChanges() {
-    }
 };
 __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
@@ -6140,6 +6136,7 @@ let HtmlChangePipe = class HtmlChangePipe {
         this.outputText = "";
     }
     transform(value, args) {
+        this.outputText = "";
         if (value == undefined)
             return this.outputText;
         if (value.length > 4) {
