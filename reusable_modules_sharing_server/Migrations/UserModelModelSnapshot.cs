@@ -27,6 +27,8 @@ namespace WidgetServer.Migrations
 
                     b.Property<string>("Name");
 
+                    b.Property<string>("Tag");
+
                     b.Property<string>("Text");
 
                     b.Property<string>("UserId");

@@ -25,10 +25,14 @@ namespace reusable_modules_sharing_server.Controllers
     public class WidgetsController : ControllerBase
     {
         private readonly WidgetsDataContext _context;
-
+        Dictionary<string, string> tags =
+        new Dictionary<string, string>();
         public WidgetsController(WidgetsDataContext context)
         {
             _context = context;
+            tags.Add("box", "<element-el></element-el>");
+            tags.Add("circle", "<circle-element></circle-element>");
+
         }
 
         // GET: api/widgets
@@ -71,6 +75,8 @@ namespace reusable_modules_sharing_server.Controllers
                 w => w.Id == id).FirstOrDefault();
             if (widget == null)
                 return NotFound();
+            string widgetTag = "";
+            tags.TryGetValue(widget.Name, out widgetTag);
             string format = string.Format(@"D:\Centiva\reusable_modules_sharing_server\reusable_modules_sharing_server\Assets\{0}.js", widget.Name);
             using (var reader = System.IO.File.OpenText(format))
             {
@@ -83,6 +89,14 @@ namespace reusable_modules_sharing_server.Controllers
                     fileText = fileText.Replace("this.circletext", "'" + widget.Text + "'");
                 fileText = fileText.Replace("webpackJsonp", "webpackJsonp" + widget.Id.Substring(0,4));
 
+                string[] sub1 = widgetTag.Split('<');
+                string[] sub2 = sub1[1].Split('>');
+                string fin = sub2[0];
+                string[] sub3 = widget.Tag.Split('<');
+                string[] sub4 = sub3[1].Split('>');
+                string fin1 = sub4[0];
+                fileText = fileText.Replace(fin, fin1);
+
                 return Content(fileText, "text/javascript");
             }
 
@@ -93,7 +107,7 @@ namespace reusable_modules_sharing_server.Controllers
         [HttpPost]
         public async Task<IActionResult> New([FromBody] NewWidgetViewModel viewmodel)
         {
-           
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -107,20 +121,40 @@ namespace reusable_modules_sharing_server.Controllers
             user.Widgets = await _context.Widgets
                 .Where(w => w.User == user).ToListAsync();
 
-           
-
             var widget = viewmodel.ToModel();
             widget.UserId = user.Email;
             var widgetExists = user.Widgets
                 .Where(w => w.Colour == widget.Colour &&
                 w.Name == widget.Name &&
                 w.Text == widget.Text &&
+                w.Tag == widget.Tag &&
                 w.UserId == widget.UserId).SingleOrDefault();
             if (widgetExists != null)
             {
                 return Ok(JsonConvert.SerializeObject(widgetExists.Id));
             }
+            // Make the widget tag unique
+            int widgetCount = user.Widgets
+                .Where(w => w.Name == widget.Name).ToList().Count;
 
+            string widgetTag = "";
+            tags.TryGetValue(widget.Name, out widgetTag);
+
+            if (widgetCount > 0)
+            {
+                string endTag = "";
+                string[] subs = widgetTag.Split('>');
+                int subsLen = subs.Length - 1;
+                for (int i = 0; i < (subsLen); i++)
+                {
+                    endTag += subs[i] + (widgetCount) + '>';
+                }
+                widget.Tag = endTag;
+            }
+            else
+                widget.Tag = widgetTag;
+
+            
             _context.Widgets.Add(widget);
             await _context.SaveChangesAsync();
             return Ok(JsonConvert.SerializeObject(widget.Id));

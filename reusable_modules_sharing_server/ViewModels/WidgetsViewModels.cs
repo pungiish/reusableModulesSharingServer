@@ -11,6 +11,7 @@ namespace reusable_modules_sharing_server.ViewModels
         public string Name { get; set; }
         public string Colour { get; set; }
         public string Text { get; set; }
+        public string Tag { get; set; }
         public string UserId { get; set; }
     }
 
@@ -20,6 +21,7 @@ namespace reusable_modules_sharing_server.ViewModels
         public string Name { get; set; }
         public string Colour { get; set; }
         public string Text { get; set; }
+        public string Tag { get; set; }
         public string UserId { get; set; }
 
     }
@@ -30,6 +32,7 @@ namespace reusable_modules_sharing_server.ViewModels
         public string Name { get; set; }
         public string Colour { get; set; }
         public string Text { get; set; }
+        public string Tag { get; set; }
         public UserViewModel User { get; set; }
     }
 
