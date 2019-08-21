@@ -75,10 +75,13 @@ namespace reusable_modules_sharing_server.Controllers
             using (var reader = System.IO.File.OpenText(format))
             {
                 var fileText = await reader.ReadToEndAsync();
-                if(widget.Colour != null)
+                if(widget.Colour != null && widget.Name == "box")
                     fileText = fileText.Replace("colour", "'" + widget.Colour + "'");
-                if(widget.Text != null)
-                    fileText = fileText.Replace("circleText", "'" + widget.Text + "'");
+                else if (widget.Colour != null && widget.Name == "circle")
+                    fileText = fileText.Replace("this.colour", "'" + widget.Colour + "'");
+                if (widget.Text != null)
+                    fileText = fileText.Replace("this.circletext", "'" + widget.Text + "'");
+                fileText = fileText.Replace("webpackJsonp", "webpackJsonp" + widget.Id.Substring(0,4));
 
                 return Content(fileText, "text/javascript");
             }
