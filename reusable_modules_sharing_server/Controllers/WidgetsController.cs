@@ -61,7 +61,7 @@ namespace reusable_modules_sharing_server.Controllers
 
             if (widgets == null)
                 return NotFound();
-
+            Console.WriteLine(widgets);
             return Ok(widgets);                
         }
 
@@ -81,13 +81,13 @@ namespace reusable_modules_sharing_server.Controllers
             using (var reader = System.IO.File.OpenText(format))
             {
                 var fileText = await reader.ReadToEndAsync();
-                if(widget.Colour != null && widget.Name == "box")
-                    fileText = fileText.Replace("colour", "'" + widget.Colour + "'");
+                if (widget.Colour != null && widget.Name == "box")
+                    fileText = fileText.Replace("[[4," +  "\"" + "background\"" + ",null]]", "[[4," + "\"" + "background" + "\"" + ",'" + widget.Colour +"']]");
                 else if (widget.Colour != null && widget.Name == "circle")
                     fileText = fileText.Replace("this.colour", "'" + widget.Colour + "'");
                 if (widget.Text != null)
                     fileText = fileText.Replace("this.circletext", "'" + widget.Text + "'");
-                fileText = fileText.Replace("webpackJsonp", "webpackJsonp" + widget.Id.Substring(0,4));
+               //fileText = fileText.Replace("webpackJsonp", "webpackJsonp" + widget.Id.Substring(0,4));
 
                 string[] sub1 = widgetTag.Split('<');
                 string[] sub2 = sub1[1].Split('>');
